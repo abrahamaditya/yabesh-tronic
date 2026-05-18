@@ -146,7 +146,8 @@
   top: 0;
   right: 0;
   width: 300px;
-  height: 100vh;
+  height: 100%; /* Fallback fix: 100% on fixed elements accounts for browser UI */
+  height: 100dvh; /* Modern fix: Dynamic Viewport Height automatically resizes with Chrome address bar */
   /* Premium elegant gradient: Top-centered radial brand blue glow + Vertical linear slate-white transition */
   background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.04) 0%, rgba(255, 255, 255, 0) 50%),
               linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
