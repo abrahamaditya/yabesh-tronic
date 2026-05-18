@@ -1,0 +1,319 @@
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: stretch;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.headerLeft {
+  margin-bottom: 2rem;
+}
+
+.headerLeft h2 {
+  margin-bottom: 1rem;
+}
+
+.profileCard {
+  background: #ffffff;
+  padding: 2.25rem;
+  border-radius: 20px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.profileCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary) 0%, #3b82f6 100%);
+}
+
+.profileCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+.badgeRow {
+  margin-bottom: 1.25rem;
+  display: flex;
+}
+
+.trustBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  letter-spacing: 0.02em;
+  white-space: nowrap; /* Mencegah badge terlipat menjadi 2 baris di HP */
+}
+
+.trustBadgeIcon {
+  font-size: 0.95rem;
+}
+
+.profileTextLead {
+  font-size: 1.125rem; /* Ukuran pembuka yang seimbang dan nyaman */
+  line-height: 1.75; /* Jarak baris luas agar mata tidak cepat lelah */
+  color: #334155; /* Slate-700 ramah mata untuk kenyamanan membaca digital */
+  font-weight: 500; /* Medium weight untuk visual yang bersih dan ringan */
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.profileTextLead strong {
+  color: #0f172a; /* Menyorot kata kunci penting dengan warna hitam pekat */
+  font-weight: 750;
+}
+
+.profileTextDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 1.75rem;
+}
+
+.pillarsRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.pillarTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.pillarTag:hover {
+  background: rgba(37, 99, 235, 0.03);
+  border-color: rgba(37, 99, 235, 0.2);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.pillarIcon {
+  font-size: 0.95rem;
+}
+
+.profileText strong {
+  color: #0f172a;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 0;
+  padding: 1.75rem;
+  background-color: #ffffff; /* Menggunakan putih bersih */
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02); /* Bayangan ultra halus agar terlihat premium */
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.infoItem span {
+  font-size: 1.2rem;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.chatButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background-color: var(--primary); /* PT Yabesh Tronic Brand Blue */
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 9999px; /* Pill shape matching other buttons */
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  border: 2px solid transparent;
+}
+
+.btnPrimary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.btnOutline {
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.8rem 2rem;
+  border-radius: 9999px; /* Pill shape matching other buttons */
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnOutline:hover {
+  background-color: rgba(37, 99, 235, 0.04);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.rightCol {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+@media (max-width: 992px) {
+  .header {
+    text-align: left;
+    margin-bottom: 2.5rem; /* Cozy mobile vertical gap */
+  }
+  .mapContainer {
+    height: 400px;
+  }
+}
+
+.chatLink {
+  color: #334155; /* Regular text color inside slate box */
+  text-decoration: none;
+  font-weight: 500; /* Normal weight by default! */
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.15rem;
+}
+
+.chatLink:hover {
+  color: var(--primary); /* Turns blue on hover! */
+  text-decoration: underline; /* Shows underline on hover! */
+  font-weight: 700; /* Bold on hover! */
+}
+
+.waIcon {
+  width: 20px;
+  height: 20px;
+  color: #25d366; /* Identical WhatsApp Green */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contactTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.aboutUs {
+  background: radial-gradient(circle at 20% 40%, rgba(37, 99, 235, 0.04) 0%, rgba(37, 99, 235, 0.01) 50%, #ffffff 100%);
+  padding: 7rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Mobile Responsive Optimization for Symmetrical Spacing */
+@media (max-width: 768px) {
+  .aboutUs {
+    padding: 4rem 0;
+  }
+  
+  .profileCard {
+    padding: 1.25rem !important; /* Cozy padding to fit within screen margins */
+    margin-bottom: 1.75rem !important;
+  }
+  
+  .contactInfo {
+    padding: 1.25rem !important; /* Cozy padding to fit within screen margins */
+  }
+  
+  .trustBadge {
+    font-size: 0.72rem !important; /* Scaled down slightly so it never overflows card borders */
+    padding: 0.25rem 0.65rem !important;
+  }
+  
+  .pillarTag {
+    font-size: 0.75rem !important;
+    padding: 0.35rem 0.65rem !important;
+  }
+  
+  .contactTitle {
+    font-size: 1.15rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+    padding-left: 0.15rem !important;
+  }
+}

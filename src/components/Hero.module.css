@@ -1,0 +1,371 @@
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.04) 0%, rgba(37, 99, 235, 0.01) 50%, var(--background) 100%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  padding: 4rem 0 4.5rem 0; /* Tighter top padding to bring content closer to the Navbar */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background glow effects */
+.glowBg {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1040px; /* Constrain width of the hero content block for generous margins */
+  margin: 0 auto;    /* Center the hero block horizontally */
+}
+
+.heroTextSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.75rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 0.825rem;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+}
+
+.highlight {
+  color: var(--primary);
+  background: linear-gradient(120deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+  padding: 0 0.4rem;
+  border-radius: 4px;
+}
+
+/* Vertical checklist */
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--foreground);
+}
+
+.checkIcon {
+  color: #ffffff;
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  margin-top: 2px;
+}
+
+.checkText {
+  color: #334155; /* slate-700 */
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Right side showcase */
+.heroVisualSide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageCard {
+  position: relative;
+  background: #ffffff;
+  padding: 0.75rem; /* Narrower padding inside the card so the image can fill closer to the borders */
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  z-index: 3;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px; /* Enlarged card width for a more prominent visual showcase */
+  width: 100%;
+  height: 420px; /* Enlarged card height to match aspect ratio */
+  transform: translateY(-110px); /* Raised even higher to float majestically next to the header copywriting */
+}
+
+.imageCard:hover {
+  transform: translateY(-118px) rotate(1deg); /* Raised extra higher on hover */
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.slideItem {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem; /* Perfectly symmetric 0.75rem margins on all 4 sides! */
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideImage {
+  object-fit: cover; /* Cover fill the entire container boundary, ensuring exact uniform layout for all copiers */
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.modelTag {
+  position: absolute;
+  bottom: 26px; /* Lowered and tightly coupled right above the indicators */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95); /* Elegant frosted white background as requested */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #0f172a; /* High-contrast crisp slate-900 text */
+  font-size: 0.7rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+  white-space: nowrap;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modelTag:hover {
+  background: var(--primary); /* Turns vibrant brand blue on hover! */
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  transform: translateX(-50%) scale(1.04); /* Luxurious subtle expansion */
+}
+
+.brandName {
+  font-weight: 500; /* Robust medium weight for "Canon" so it remains perfectly legible and solid */
+  color: #334155; /* Solid slate-700 color for excellent readability */
+  transition: color 0.3s ease;
+}
+
+.modelTag:hover .brandName {
+  color: rgba(255, 255, 255, 0.85); /* Turns elegant semi-transparent white on label hover */
+}
+
+.modelName {
+  font-weight: 800; /* Extra bold model name for striking emphasis and typographical contrast */
+  color: #0f172a; /* Slate-900 strong focus */
+  transition: color 0.3s ease;
+}
+
+.modelTag:hover .modelName {
+  color: #ffffff; /* Turns solid pure white on label hover */
+}
+
+.indicators {
+  position: absolute;
+  bottom: 20px; /* Raised elegantly to meet the modelTag in a tight vertical cluster */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 20;
+}
+
+.indicatorDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65); /* Elegant semi-transparent white to pop beautifully over the cover images */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.15); /* Tiny shadow to guarantee visibility even on full white backgrounds */
+}
+
+.indicatorDot:hover {
+  background: rgba(255, 255, 255, 1); /* Crisp solid white on hover */
+}
+
+.activeDot {
+  background: var(--primary);
+  width: 16px; /* pill shape when active */
+  border-radius: 9999px;
+}
+
+/* Frosted-glass navigation arrow buttons that float on hover */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  color: #0f172a; /* Slate-900 icon color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 30;
+  opacity: 0; /* Hidden by default */
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.prevBtn {
+  left: 24px; /* Inset further inside the image for a premium, spacious look */
+}
+
+.nextBtn {
+  right: 24px; /* Inset further inside the image for a premium, spacious look */
+}
+
+/* Reveal arrow buttons beautifully on imageCard hover */
+.imageCard:hover .navBtn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navBtn:hover {
+  background: #ffffff;
+  color: var(--primary);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.18);
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Visual Glow behind image */
+.visualGlow {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Responsive breakpoint media queries */
+@media (max-width: 992px) {
+  .hero {
+    padding: 3rem 0 3.5rem 0;
+  }
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    max-width: 100%;
+  }
+  .heroTextSide {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .checklist {
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0;
+  }
+  .checkItem {
+    text-align: left;
+  }
+  .ctaGroup {
+    justify-content: flex-start;
+  }
+  .heroVisualSide {
+    margin-top: 1.5rem;
+  }
+  .imageCard {
+    transform: translateY(0); /* Reset vertical offset on mobile/tablet to avoid overlapping */
+    height: 380px; /* Increased tablet height for enlarged visual card */
+  }
+  .imageCard:hover {
+    transform: translateY(-6px) rotate(1deg); /* Gentle hover lift on mobile/tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTextSide h1 {
+    font-size: 2.65rem !important; /* Dikembalikan menjadi besar, tebal, dan megah */
+    line-height: 1.25 !important; /* Spasi antar baris (leading) tetap longgar agar tidak menempel */
+    letter-spacing: -0.04em !important;
+  }
+  
+  .heroTextSide p {
+    font-size: 1.25rem !important; /* Teks paragraf pembuka dikembalikan besar dan jelas */
+    line-height: 1.7 !important; /* Jarak baris paragraf yang luas dan mudah dibaca */
+    color: #475569 !important;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .ctaGroup a {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap; /* Guarantee no-wrap on smaller viewports */
+  }
+}
+
+@media (max-width: 480px) {
+  .badge {
+    font-size: 0.65rem; /* Shrink font size to fit on one line */
+    padding: 0.35rem 0.85rem; /* Tighter padding for mobile screens */
+    letter-spacing: 0.3px; /* Tighter letter spacing for clean alignment */
+    white-space: nowrap; /* Force the text to remain strictly on 1 line */
+  }
+  .imageCard {
+    height: 320px; /* Increased mobile height for small devices */
+  }
+}

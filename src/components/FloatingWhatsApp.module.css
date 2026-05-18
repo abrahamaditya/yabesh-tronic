@@ -1,0 +1,109 @@
+.wrapper {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bubble {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+}
+
+.bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  border-width: 8px 0 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+
+.float {
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: pulse 2s infinite;
+}
+
+.float:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(37, 211, 102, 0.6);
+  animation: none;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    bottom: 20px;
+    right: 20px;
+    flex-direction: row; /* Horizontal row on mobile, bubble to the left */
+    gap: 10px;
+  }
+  .bubble {
+    font-size: 0.8rem; /* Sedikit diperbesar agar nyaman dibaca di mobile */
+    padding: 8px 12px; /* Padding yang lebih empuk dan seimbang */
+    border-radius: 8px;
+  }
+  .bubble::after {
+    top: 50%;
+    right: -7px; /* Penyesuaian jarak panah */
+    transform: translateY(-50%);
+    border-width: 7px 0 7px 7px;
+    border-color: transparent transparent transparent #ffffff;
+  }
+  .float {
+    width: 52px; /* Tombol bulat sedikit diperbesar agar mudah ditekan */
+    height: 52px;
+  }
+  .icon {
+    width: 28px; /* Ikon WhatsApp di dalam diperbesar proporsional */
+    height: 28px;
+  }
+}
+
+:global(body.modal-open) .wrapper,
+:global(body.sidebar-open) .wrapper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.95);
+}

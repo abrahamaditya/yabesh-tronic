@@ -1,0 +1,52 @@
+.footer {
+  background-color: #f8fafc; /* Premium slate-50 light background */
+  border-top: 1px solid #e2e8f0; /* Subtle slate-200 border */
+  padding: 2rem 0; /* Elegant, compact padding */
+  color: #334155; /* Slate-700 text */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #475569; /* Slate-600 */
+  font-weight: 500;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 576px) {
+  .bottomLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+.bottomLink {
+  font-size: 0.9rem;
+  color: #475569; /* Slate-600 */
+  font-weight: 600; /* Solid bold/medium weight for B2B partner and guarantee badges */
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}

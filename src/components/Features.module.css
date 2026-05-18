@@ -1,0 +1,69 @@
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 960px; /* Constrain grid width for compact and centered cards */
+  margin: 0 auto;   /* Center the grid container horizontally */
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 100%;
+  }
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(37, 99, 235, 0.03) 100%); /* Breathtaking subtle blue gradient background */
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(37, 99, 235, 0.12); /* Extremely elegant, subtle corporate blue border framing the card */
+  border-radius: var(--radius);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03), 0 1px 3px rgba(37, 99, 235, 0.05); /* Modern, soft premium shadow with a hint of blue */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(37, 99, 235, 0.07) 100%); /* Richer, premium blue gradient on hover */
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(37, 99, 235, 0.1);
+  border-color: var(--primary); /* Turns solid corporate blue on hover */
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.desc {
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.features {
+  background: radial-gradient(circle at 10% 80%, rgba(37, 99, 235, 0.04) 0%, rgba(37, 99, 235, 0.01) 50%, var(--surface) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .header {
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
+  .card {
+    text-align: left;
+    padding: 2.25rem 1.75rem; /* Cozy padding for smaller mobile screens */
+  }
+}
