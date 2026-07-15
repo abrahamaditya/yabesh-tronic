@@ -78,7 +78,7 @@ const localBusinessSchema = {
   "image": "https://yabeshtronic.com/logo-company.png",
   "@id": "https://yabeshtronic.com",
   "url": "https://yabeshtronic.com",
-  "telephone": "+62 821-5117-6188",
+  "telephone": "+62 895-4107-74936",
   "priceRange": "$$",
   "description": "Pusat penyedia layanan jasa sewa mesin fotocopy berkualitas untuk kebutuhan bisnis, perkantoran, dan perusahaan. Menyediakan penjualan suku cadang (spare parts) lengkap dan layanan servis profesional.",
   "address": {

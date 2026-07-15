@@ -94,7 +94,7 @@ export default function Hero() {
                 Pilih Mesin Anda Sekarang
               </Link>
               <a 
-                href="https://wa.me/6282151176188?text=Halo%20Tim%20Yabesh%20Tronic,%20saya%20tertarik%20untuk%20menanyakan%20terkait%20harga%20dan%20penawaran%20khusus%20terbaru%20mesin%20fotocopy.%20Boleh%20bantu%20kirimkan%20informasinya?" 
+                href="https://wa.me/62895410774936?text=Halo%20Tim%20Yabesh%20Tronic,%20saya%20tertarik%20untuk%20menanyakan%20terkait%20harga%20dan%20penawaran%20khusus%20terbaru%20mesin%20fotocopy.%20Boleh%20bantu%20kirimkan%20informasinya?" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-outline"

@@ -64,7 +64,7 @@ export default function Navbar() {
           </div>
           
           <a 
-            href="https://wa.me/6282151176188?text=Halo%20Tim%20Yabesh%20Tronic,%20saya%20ingin%20konsultasi%20mengenai%20mesin%20fotocopy." 
+            href="https://wa.me/62895410774936?text=Halo%20Tim%20Yabesh%20Tronic,%20saya%20ingin%20konsultasi%20mengenai%20mesin%20fotocopy." 
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.ctaBtn}
@@ -161,12 +161,12 @@ export default function Navbar() {
               <div>
                 <strong className={styles.infoTitle}>WhatsApp</strong><br />
                 <a 
-                  href="https://wa.me/6282151176188?text=Halo%20Pak%20Hendra,%20saya%20ingin%20konsultasi%20mengenai%20mesin%20fotocopy." 
+                  href="https://wa.me/62895410774936?text=Halo%20Pak%20Hendra,%20saya%20ingin%20konsultasi%20mengenai%20mesin%20fotocopy." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={styles.chatLink}
                 >
-                  0821-5117-6188
+                  0895-4107-74936
                 </a>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function Navbar() {
 
         <div className={styles.sidebarFooter}>
           <a 
-            href="https://wa.me/6282151176188?text=Halo%20Tim%20Yabesh%20Tronic,%20saya%20ingin%20konsultasi%20mengenai%20mesin%20fotocopy." 
+            href="https://wa.me/62895410774936?text=Halo%20Tim%20Yabesh%20Tronic,%20saya%20ingin%20konsultasi%20mengenai%20mesin%20fotocopy." 
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.sidebarCtaBtn}

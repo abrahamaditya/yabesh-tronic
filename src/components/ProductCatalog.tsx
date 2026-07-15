@@ -209,7 +209,7 @@ export default function ProductCatalog() {
                 
                 <div className={styles.modalAction}>
                   <a 
-                    href={`https://wa.me/6282151176188?text=Halo%20PT%20Yabesh%20Tronic,%20saya%20ingin%20memesan%20/%20menyewa%20unit%20mesin%20fotocopy%20*${encodeURIComponent(activeProduct.name)}*%20untuk%20kebutuhan%20bisnis%20saya.%20Mohon%20informasi%20prosedur%20pemesanan%20dan%20langkah%20selanjutnya.%20Terima%20kasih.`} 
+                    href={`https://wa.me/62895410774936?text=Halo%20PT%20Yabesh%20Tronic,%20saya%20ingin%20memesan%20/%20menyewa%20unit%20mesin%20fotocopy%20*${encodeURIComponent(activeProduct.name)}*%20untuk%20kebutuhan%20bisnis%20saya.%20Mohon%20informasi%20prosedur%20pemesanan%20dan%20langkah%20selanjutnya.%20Terima%20kasih.`} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="btn btn-primary" 

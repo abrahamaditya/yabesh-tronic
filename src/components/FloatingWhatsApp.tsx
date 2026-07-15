@@ -1,7 +1,7 @@
 import styles from './FloatingWhatsApp.module.css';
 
 export default function FloatingWhatsApp() {
-  const phoneNumber = "6282151176188"; // Hendra
+  const phoneNumber = "62895410774936"; // Hendra
   const defaultText = "Halo PT Yabesh Tronic, saya ingin berkonsultasi mengenai sewa mesin fotocopy.";
   const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultText)}`;
 
